@@ -1,11 +1,3 @@
-// import React from 'react';
-
-// const Profile = () => {
-  
-// };
-
-// export default Profile;
-
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -20,17 +12,19 @@ const Profile = () => {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({ username: "username" });
   const { setCurrentUser } = useAuth();
+ 
 
   useEffect(() => {
     const fetchUserDetails = async () => {
       const userId = localStorage.getItem("userId");
+      // console.log(localStorage);
 
       if (userId) {
         try {
           const response = await axios.get(
             `http://localhost:3002/userProfile/${userId}`
           );
-          
+          // console.log(response);
           setUserDetails(response.data);
         } catch (err) {
           console.error("Cannot fetch user details: ", err);
@@ -60,8 +54,8 @@ const Profile = () => {
         </UnderlineNav.Item>
 
         <UnderlineNav.Item
-        //   onClick={() => navigate("/repo")}
-        //   icon={RepoIcon}
+          onClick={() => navigate("/repo")}
+          icon={RepoIcon}
           sx={{
             backgroundColor: "transparent",
             color: "whitesmoke",
