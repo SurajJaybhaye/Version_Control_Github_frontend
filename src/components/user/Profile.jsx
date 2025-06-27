@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate,useSearchParams } from "react-router-dom";
 import axios from "axios";
 import "./profile.css";
 import Navbar from "../Navbar";
 import { UnderlineNav } from "@primer/react";
 import { BookIcon, RepoIcon } from "@primer/octicons-react";
 import HeatMapProfile from "./Heatmap";
+import Repo from "./Repo";
 import { useAuth } from "../../authContext";
+
 
 const Profile = () => {
   const navigate = useNavigate();
   const [userDetails, setUserDetails] = useState({ username: "username" });
   const { setCurrentUser } = useAuth();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const tab = searchParams.get("tab") || "overview";
  
 
   useEffect(() => {
@@ -26,6 +30,7 @@ const Profile = () => {
           );
           // console.log(response);
           setUserDetails(response.data);
+          localStorage.setItem("username", fetchUserDetails.username);
         } catch (err) {
           console.error("Cannot fetch user details: ", err);
         }
@@ -34,18 +39,25 @@ const Profile = () => {
     fetchUserDetails();
   }, []);
 
+  // Define handleTabChange function
+  const handleTabChange = (newTab) => {
+    setSearchParams({ tab: newTab });
+    console.log("Switching to tab:", newTab);
+  };
+
   return (
     <>
       <Navbar />
       <UnderlineNav aria-label="Repository">
         <UnderlineNav.Item
-          aria-current="page"
+          aria-current={tab === "overview" ? "page" : undefined}
+          onClick={() => handleTabChange("overview")}
           icon={BookIcon}
           sx={{
             backgroundColor: "transparent",
-            color: "white",
+            color: tab === "overview" ? "white" : "whitesmoke",
+            fontSize: "larger",
             "&:hover": {
-              textDecoration: "underline",
               color: "white",
             },
           }}
@@ -54,18 +66,19 @@ const Profile = () => {
         </UnderlineNav.Item>
 
         <UnderlineNav.Item
-          onClick={() => navigate("/repo")}
+          aria-current={tab === "repositories" ? "page" : undefined}
+          onClick={() => handleTabChange("repositories")}
           icon={RepoIcon}
           sx={{
             backgroundColor: "transparent",
-            color: "whitesmoke",
+            color: tab === "repositories" ? "white" : "whitesmoke",
+            fontSize: "larger",
             "&:hover": {
-              textDecoration: "underline",
               color: "white",
             },
           }}
         >
-          Starred Repositories
+          Repositories
         </UnderlineNav.Item>
       </UnderlineNav>
 
@@ -100,7 +113,11 @@ const Profile = () => {
         </div>
 
         <div className="heat-map-section">
-          <HeatMapProfile />
+          {tab === "overview" ? (
+            <HeatMapProfile />
+          ) : tab === "repositories" ? (
+            <Repo /> // Render the Repo component for the "repositories" tab
+          ) : null}
         </div>
       </div>
     </>

@@ -1,30 +1,129 @@
+#root {
+  margin: 0;
+  padding: 0 0px;
+ 
+}
+
 nav {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
-  border-bottom: 2px solid white;
+  align-items: center;
+  width: 100vw;
+  padding: 10px 10px;
+  background-color: #0c0202;
+  border-bottom: 1px solid #464343;
+  margin: 0;
+  padding-left: 35px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
 }
 
 nav img {
-  height: 50px;
-  border-radius: 100%;
-}
-nav div {
-  display: flex;
+  height: 42px;
+  width: 42px;
+  border-radius: 200%;
+  /* background-color: #000; */
+  opacity: 0.8;
 }
 
 nav h3 {
-  margin-left: 15px;
-  color: white;
+  padding-left: 20px;
+  color: #fff;
+  font-size: 1.2em;
 }
 
-nav p {
-  margin-left: 50px;
-  font-weight: bold;
-  color: white;
+.nav-right {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
 }
 
-nav h3:hover,
-nav p:hover {
+nav input {
+  padding: 5px 10px;
+  margin-right: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #f3eded;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 1.2em;
+  color: #fff;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.createRepo{
+  border: 1px solid rgb(147, 145, 145);
+  color: #8e8c8c;
+  border-radius: 6px;
+}
+
+/* .icon-btn:hover {
   text-decoration: underline;
+} */
+
+.issues{
+  border: 1px solid rgb(153, 153, 153);
+  color: #8e8c8c;
+  border-radius: 6px;
+  position: relative;
+
+}
+
+.searchBox{
+ height: 31.6px;
+ width: 280px;
+ border-radius: 6px;
+ font-size: medium;
+ background-color: #0c0202;
+ color: rgb(250, 248, 248);
+ border: 1px solid rgb(99, 98, 97);
+}
+
+
+.outercircle {
+  width: 18px;
+  height: 18px;
+  background-color: #5e5b5b; /* Gray outer circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.innercircle {
+  width: 12px;
+  height: 12px;
+  background-color: #050000; /* White inner circle */
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dot {
+  width: 4px;
+  height: 4px;
+  background-color: #6b6a6a; /* White dot */
+  border-radius: 50%;
+}
+
+.profile{
+  background-color: #5f5e5e;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
 }

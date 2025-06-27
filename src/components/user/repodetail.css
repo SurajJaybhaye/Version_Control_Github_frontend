@@ -1,0 +1,78 @@
+.repo-detail-container {
+  background-color: #0d1117;
+  color: #c9d1d9;
+  min-height: calc(100vh - 60px); /* Adjust for Navbar height */
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  /* background-color: #0eee3a; */
+  margin-left: 200px;
+}
+
+.repo-detail-title {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #fff;
+  border-bottom: 1px solid #30363d;
+  padding-bottom: 30px;
+}
+
+.repo-detail-content {
+  background-color: #161b22;
+  padding: 20px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+}
+
+.repo-detail-description,
+.repo-detail-updated,
+.repo-detail-id {
+  margin: 10px 0;
+  color: #c9d1d9;
+}
+
+.repo-detail-description strong,
+.repo-detail-updated strong,
+.repo-detail-id strong {
+  color: #58a6ff;
+}
+
+.loading,
+.error,
+.not-found {
+  color: #8b949e;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+
+.back-btn,
+.logout-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.back-btn {
+  background-color: #238636;
+  color: white;
+}
+
+.back-btn:hover {
+  background-color: #1a6e3d;
+}
+
+.logout-btn {
+  background-color: #da3633;
+  color: white;
+  align-self: flex-end;
+}
+
+.logout-btn:hover {
+  background-color: #b62318;
+}

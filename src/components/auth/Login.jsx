@@ -48,20 +48,19 @@ const Login = () => {
 
   return (
     <div className="login-wrapper">
-      <div className="login-logo-container">
-        <img className="logo-login" src={logo} alt="Logo" />
-      </div>
+          <div className="login-name"> 
+          <div className="login-logo-container">
+            <img className="logo-login" src={logo} alt="Logo" />
+          </div>
 
-      <div className="login-box-wrapper">
-        <div className="login-heading">
-          <Box sx={{ padding: 1 }}>
-            <PageHeader>
-              <PageHeader.TitleArea variant="large">
-                <PageHeader.Title>Sign In</PageHeader.Title>
-              </PageHeader.TitleArea>
-            </PageHeader>
-          </Box>
+      <div className="login-heading">
+          
+          <div className="login-name-h1">
+            Sign In
+          </div>
         </div>
+        </div>
+       <div className="login-box-wrapper">
         <div className="login-box">
           <div>
             <label className="label">Email address</label>

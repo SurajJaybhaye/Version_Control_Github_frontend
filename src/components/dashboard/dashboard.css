@@ -1,5 +1,69 @@
+ 
 #dashboard {
   display: flex;
-  width: 1080px;
-  justify-content: space-between;
+   width: 100vw; 
+   justify-content: space-between;
+  color: white;
+} 
+
+.sidebar{
+  width: 26rem;
+  height: 90vh;
+  background-color: #161b22;
+  border: 1px solid rgb(33, 33, 33);
+}
+
+#search input{
+  width: 22rem;
+  height: 2rem;
+  border-radius: 6px;
+  color: rgb(229, 236, 236);
+  padding: 0 10px;
+  font-size: medium;
+  background-color: rgb(17, 17, 19);
+
+}
+
+
+
+.sidebar-nav{
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; */
+  align-items: center;
+  padding-top: 20px;
+  /* background-color: aquamarine; */
+}
+
+.sidebar-nav h3{
+     padding-right: 150px;
+     
+}
+
+.new-repo-button {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  background-color: #2ea44f; /* GitHub green */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.events-tab{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid gray;
+  height: 20rem;
+  width: 20rem;;
+  margin-left: 3rem;
+}
+
+.event{
+
 }

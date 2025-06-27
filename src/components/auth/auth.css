@@ -1,18 +1,39 @@
-#root{
-  padding: 0px;
+body{
+  background-color: black;
+}
+.login-name{
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center; 
+ height: 150px;
+ width: 364px;
+
+ background-color: #0e0e0f;
 }
 
+.login-name-h1{
+  font-size: x-large;
+  font-weight: 700;
+  padding-top: 18px;
+
+}
 
 .login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 75px;
     color: #f1f6fd;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     font-family: "Asap", sans-serif;
-    background-color: #0c1116;
+    background-color: #050505;
+    padding-left: 800px ;
   }
   
   .login-logo-container {
-    padding: 40px 0px 20px;
+    /* padding: 40px 0px 20px; */
     width: 100%;
     display: flex;
     align-items: center;
@@ -114,6 +135,8 @@
   
   .login-btn {
     width: 250px;
+    background-color: #079a24;
+    font-weight: 600;
   }
   
   .pass-box {
