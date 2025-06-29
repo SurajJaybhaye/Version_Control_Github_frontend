@@ -7,6 +7,9 @@
 } 
 
 .sidebar{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
   width: 26rem;
   height: 90vh;
   background-color: #161b22;
@@ -14,6 +17,9 @@
 }
 
 #search input{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
   width: 22rem;
   height: 2rem;
   border-radius: 6px;
@@ -64,6 +70,12 @@
   margin-left: 3rem;
 }
 
-.event{
+.results{
+   display: flex;
+   justify-content: center;
+}
 
+#search{
+  display: flex ;
+  justify-content: center;
 }

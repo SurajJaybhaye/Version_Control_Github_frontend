@@ -1,5 +1,13 @@
-body{
-  background-color: black;
+*{
+  margin: 0;
+  padding: 0 0;
+}
+
+html,body{
+  background-color: rgb(10, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .login-name{
   display: flex;
@@ -23,13 +31,14 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 75px;
+  justify-content: center;
+  margin-top: 20vh;
     color: #f1f6fd;
     height: 100%;
     width: 100%;
     font-family: "Asap", sans-serif;
-    background-color: #050505;
-    padding-left: 800px ;
+    background-color: #030303;
+    /* padding-left: 800px ; */
   }
   
   .login-logo-container {
@@ -155,6 +164,20 @@ body{
     width: 250px;
   }
   
+#Username {
+    width: 250px;
+    height: 35px;
+    background-color: #0c1116;
+    border-radius: 5px;
+    padding: 0 1rem;
+    border: 0.5px solid #f1f6fd;
+    font-size: 1rem;
+    color: whitesmoke;
+    transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+      color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1) 0s,
+      background 0.2s cubic-bezier(0.25, 0.01, 0.25, 1) 0s;
+  }
+
   @media screen and (max-width: 400px) {
     .login-box {
       width: 200px;

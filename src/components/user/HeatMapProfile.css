@@ -4,11 +4,12 @@
   padding: 20px 50px ;
   justify-content: center;
   /* align-items: center; */
-  background-color: #0d1117;
+  background-color: #111a24;
   color: #c9d1d9;
   /* background-color: aqua; */
   margin-left: 30px;
   margin-top: 10rem;
+  /* height: 40vh; */
   
 }
 
@@ -49,5 +50,6 @@
 
 /* Ensure the heatmap itself can expand */
 .HeatMapProfile {
-  min-width: 800px; /* Approximate width for 365 days with rectSize 12 and space 2 */
+  min-width: 800px; 
+  /* Approximate width for 365 days with rectSize 12 and space 2 */
 }

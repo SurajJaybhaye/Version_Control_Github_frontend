@@ -77,7 +77,7 @@ const Dashboard = () => {
          
           {searchResults.map((repo) => {
             return (
-              <div key={repo._id}>
+              <div className="results" key={repo._id}>
                 <h4>{repo.name}</h4>
                 
               </div>
