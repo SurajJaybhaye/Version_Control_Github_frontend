@@ -8,6 +8,8 @@ html,body{
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 .login-name{
   display: flex;
@@ -32,12 +34,12 @@ html,body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20vh;
+  /* margin-top: 20vh; */
     color: #f1f6fd;
     height: 100%;
     width: 100%;
     font-family: "Asap", sans-serif;
-    background-color: #030303;
+    background-color: #020202;
     /* padding-left: 800px ; */
   }
   
