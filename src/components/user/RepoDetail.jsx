@@ -98,17 +98,7 @@ const RepoDetail = () => {
         >
           Back
         </button>
-        <button
-          className="logout-btn"
-          onClick={() => {
-            localStorage.removeItem("token");
-            localStorage.removeItem("userId");
-            setCurrentUser(null);
-            navigate("/auth");
-          }}
-        >
-          Logout
-        </button>
+       
       </div>
     </>
   );

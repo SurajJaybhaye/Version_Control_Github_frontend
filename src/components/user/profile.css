@@ -1,15 +1,13 @@
-html,body{
+*{
     margin: 0;
-    padding: 0 0px;
-    
     
 }
 .profile-page-wrapper {
   display: flex;
-  height: 100%;
+  height: calc(100vh - 160px);
   color: whitesmoke;
   width: 100vw;
-  background-color: rgb(7, 7, 7);
+  background-color: rgb(2, 2, 2);
   flex-wrap: wrap;
 }
 
