@@ -49,5 +49,5 @@
 
 /* Ensure the heatmap itself can expand */
 .HeatMapProfile {
-  min-width: 600px; /* Approximate width for 365 days with rectSize 12 and space 2 */
+  min-width: 800px; /* Approximate width for 365 days with rectSize 12 and space 2 */
 }
